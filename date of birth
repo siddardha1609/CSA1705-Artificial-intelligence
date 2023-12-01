@@ -1,0 +1,9 @@
+% Database of individuals with names and DOBs
+person(siddu, '2003-05-15').
+person(sumanth, '2000-11-30').
+person(mani, '2001-02-10').
+person(anvesh, '2000-08-22').
+
+% Predicate to retrieve the DOB of a person
+get_dob(Name, DOB) :-
+    person(Name, DOB).
