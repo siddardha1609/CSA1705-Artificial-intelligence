@@ -1,0 +1,16 @@
+% Rules for logical inference
+diagnose(Patient, cold) :-
+ symptom(Patient, cough),
+ symptom(Patient, sneezing).
+diagnose(Patient, flu) :-
+ symptom(Patient, fever),
+ symptom(Patient, body_aches).
+% Facts about symptoms
+symptom(john, cough).
+symptom(john, sneezing).
+symptom(jane, fever).
+symptom(jane, body_aches).
+% Forward Chaining Inference Rule
+forward_chaining(Patient, Disease) :-
+ diagnose(Patient, Disease),
+ write('Patient '), write(Patient), write(' has been diagnosed with '), write(Disease), nl.
